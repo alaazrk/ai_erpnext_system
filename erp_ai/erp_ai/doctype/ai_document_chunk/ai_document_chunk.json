@@ -1,0 +1,64 @@
+{
+ "doctype": "DocType",
+ "name": "AI Document Chunk",
+ "module": "ERP AI",
+ "custom": 0,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "editable_grid": 1,
+ "track_changes": 0,
+ "autoname": "autoincrement",
+ "naming_rule": "Autoincrement",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "document",
+   "fieldtype": "Link",
+   "label": "Document source",
+   "options": "AI Document",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "chunk_index",
+   "fieldtype": "Int",
+   "label": "Index du fragment",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "label": "Contenu du fragment"
+  },
+  {
+   "fieldname": "embedding",
+   "fieldtype": "Long Text",
+   "label": "Embedding (JSON)"
+  }
+ ],
+ "field_order": [
+  "document",
+  "chunk_index",
+  "content",
+  "embedding"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "creation": "2026-11-16 00:00:00.000000",
+ "modified": "2026-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0
+}

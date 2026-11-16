@@ -1,0 +1,79 @@
+{
+ "doctype": "DocType",
+ "name": "AI Log",
+ "module": "ERP AI",
+ "custom": 0,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "editable_grid": 1,
+ "track_changes": 0,
+ "autoname": "format:AI-LOG-{######}",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "tool_name",
+   "fieldtype": "Data",
+   "label": "Tool",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Success\nError\nPending Validation\nRejected",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "conversation",
+   "fieldtype": "Link",
+   "label": "Conversation",
+   "options": "AI Conversation"
+  },
+  {
+   "fieldname": "count",
+   "fieldtype": "Int",
+   "label": "Nombre concerné"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Long Text",
+   "label": "Details"
+  }
+ ],
+ "field_order": [
+  "tool_name",
+  "status",
+  "user",
+  "conversation",
+  "count",
+  "details"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "creation": "2026-11-16 00:00:00.000000",
+ "modified": "2026-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0
+}

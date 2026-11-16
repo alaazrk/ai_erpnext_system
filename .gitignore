@@ -1,0 +1,14 @@
+.DS_Store
+*.pyc
+*.egg-info
+__pycache__/
+node_modules/
+*.swp
+.idea/
+.vscode/
+
+*.docx
+*.pdf
+
+*.docx
+*.pdf

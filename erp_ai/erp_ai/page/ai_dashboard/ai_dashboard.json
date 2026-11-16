@@ -1,0 +1,20 @@
+{
+ "doctype": "Page",
+ "name": "ai-dashboard",
+ "page_name": "ai-dashboard",
+ "title": "AI Dashboard",
+ "module": "ERP AI",
+ "standard": "Yes",
+ "system_page": 0,
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2026-11-16 00:00:00.000000",
+ "modified": "2026-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0
+}

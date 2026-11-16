@@ -1,0 +1,86 @@
+{
+ "doctype": "DocType",
+ "name": "AI Document",
+ "module": "ERP AI",
+ "custom": 0,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "editable_grid": 1,
+ "track_changes": 0,
+ "autoname": "field:title",
+ "naming_rule": "By fieldname",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Titre",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "Fichier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Statut",
+   "options": "Pending\nProcessing\nDone\nError",
+   "default": "Pending",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "chunk_count",
+   "fieldtype": "Int",
+   "label": "Nombre de fragments",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Message d'erreur",
+   "read_only": 1
+  },
+  {
+   "fieldname": "uploaded_by",
+   "fieldtype": "Link",
+   "label": "Ajouté par",
+   "options": "User",
+   "read_only": 1,
+   "default": "__user"
+  }
+ ],
+ "field_order": [
+  "title",
+  "file",
+  "status",
+  "chunk_count",
+  "error_message",
+  "uploaded_by"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "creation": "2026-11-16 00:00:00.000000",
+ "modified": "2026-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0
+}

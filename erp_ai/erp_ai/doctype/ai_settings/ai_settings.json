@@ -1,0 +1,116 @@
+{
+ "doctype": "DocType",
+ "name": "AI Settings",
+ "module": "ERP AI",
+ "custom": 0,
+ "engine": "InnoDB",
+ "issingle": 1,
+ "editable_grid": 1,
+ "track_changes": 0,
+ "fields": [
+  {
+   "fieldname": "ollama_section",
+   "fieldtype": "Section Break",
+   "label": "Ollama"
+  },
+  {
+   "fieldname": "ollama_server_url",
+   "fieldtype": "Data",
+   "label": "Ollama Server URL",
+   "default": "http://localhost:11434",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_model",
+   "fieldtype": "Data",
+   "label": "Modèle de chat",
+   "default": "qwen3:latest"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Température",
+   "default": "0.3"
+  },
+  {
+   "fieldname": "embedding_model",
+   "fieldtype": "Data",
+   "label": "Modèle d'embedding (RAG)",
+   "default": "nomic-embed-text",
+   "description": "Modèle Ollama utilisé pour indexer/rechercher les documents. Doit être téléchargé au préalable côté serveur : ollama pull nomic-embed-text"
+  },
+  {
+   "fieldname": "security_section",
+   "fieldtype": "Section Break",
+   "label": "Sécurité et alertes"
+  },
+  {
+   "fieldname": "human_validation_required",
+   "fieldtype": "Check",
+   "label": "Validation humaine obligatoire",
+   "default": "1"
+  },
+  {
+   "fieldname": "alert_recipients",
+   "fieldtype": "Small Text",
+   "label": "Destinataires des alertes (emails séparés par des virgules)",
+   "description": "Laisse vide pour notifier automatiquement tous les System Manager."
+  },
+  {
+   "fieldname": "alert_hour",
+   "fieldtype": "Int",
+   "label": "Heure d'envoi des alertes (0-23)",
+   "default": "6"
+  },
+  {
+   "fieldname": "quota_section",
+   "fieldtype": "Section Break",
+   "label": "Quotas"
+  },
+  {
+   "fieldname": "max_messages_per_day",
+   "fieldtype": "Int",
+   "label": "Quota de messages par utilisateur / jour",
+   "default": "200",
+   "description": "0 = illimité."
+  },
+  {
+   "fieldname": "max_write_actions_per_day",
+   "fieldtype": "Int",
+   "label": "Quota d'actions d'écriture confirmées / jour",
+   "default": "20",
+   "description": "0 = illimité. Ne compte que les actions réellement exécutées (après validation)."
+  }
+ ],
+ "field_order": [
+  "ollama_section",
+  "ollama_server_url",
+  "default_model",
+  "temperature",
+  "embedding_model",
+  "security_section",
+  "human_validation_required",
+  "alert_recipients",
+  "alert_hour",
+  "quota_section",
+  "max_messages_per_day",
+  "max_write_actions_per_day"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "creation": "2026-11-16 00:00:00.000000",
+ "modified": "2026-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0
+}
